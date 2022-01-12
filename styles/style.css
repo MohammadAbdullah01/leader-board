@@ -5,6 +5,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
+    margin:0;
     
 }
 main{
@@ -21,6 +22,46 @@ main{
     border-radius: 5px;
 }
 
+
+/* header styles */
+
+nav{
+    background-color:#562EFF ;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-container{
+    width: 930px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo-title{
+    font-size: 24px;
+    margin-left: 15px;
+}
+.logo img{
+    width: 40px;
+    height: 51px;
+}
+ul li a img{
+    width: 51px;
+    height: 51px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+ul li{
+    font-size: 16px;
+    margin-left: 36px;
+}
 
 
 
@@ -126,3 +167,90 @@ hr{
   .point{
     color: #A2A2A2;
   }
+
+  /* -------------
+    media queries
+    -------------  */
+
+    /* mobile device */
+    @media only screen and (max-width:688px) {
+        nav{
+            height: 100%;
+        }
+        .nav-container{
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .section-title{
+            text-align: center;
+        }
+        .container{
+            width: 100%;
+        }
+        .players, .blogs, .courses{
+            grid-template-columns:1fr;
+
+        }
+        .player, .blog, .course{
+            flex-direction: column;
+        }
+        .blog{
+            justify-content: center;
+            align-items: center;
+        }
+        .course{
+            margin-top:20px;
+        }
+      .for-mobile{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      }
+    }
+
+    /* tablet device  */
+
+    @media only screen and (min-width:688px) and (max-width:992px) {
+        nav{
+            height: 100%;
+        }
+        .nav-container{
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .section-title{
+            text-align: center;
+        }
+        .container{
+            width: 100%;
+        }
+        .players{
+            grid-template-columns: 1fr 1fr;
+        }
+        .blog{
+            justify-content: center;
+            align-items: center;
+        }
+        .courses{
+            grid-template-columns: 1fr;
+        }
+
+        .course{
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+        }
+        .course-detail{
+            margin-left: 15px;
+        }
+      
+    }
